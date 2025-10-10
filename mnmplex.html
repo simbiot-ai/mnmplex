@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&M Plex - Neuro Engine</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
+        .hero-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+        }
+        .neuro-border {
+            border-image: linear-gradient(to right, #7c3aed, #10b981) 1;
+            border-width: 3px;
+            border-style: solid;
+        }
+        .pulse-animation {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="font-['Poppins'] bg-gray-900 text-white">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    
+    <!-- Navigation -->
+    <nav class="backdrop-blur-md bg-gray-900/80 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="font-['Orbitron'] text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-emerald-400">M&M Plex</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-all">Home</a>
+                        <a href="#mission" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-all">Mission</a>
+                        <a href="#vision" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-all">Vision</a>
+                        <a href="#technology" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-800 transition-all">Technology</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium bg-purple-600 hover:bg-purple-700 transition-all">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 font-['Orbitron'] tracking-tight">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-white to-emerald-200">Neuro Engine</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-light mb-12 max-w-3xl mx-auto">
+                    Making Games Smarter, <span class="font-semibold text-purple-200">Players Happier</span>
+                </h2>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#mission" class="px-8 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all shadow-lg">
+                        Explore Technology
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-20 bg-gray-900/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 font-['Orbitron']">
+                    Our <span class="text-purple-400">Mission</span>
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    We create gaming ecosystems where games help players unlock their inner potential through personalized, ethical, and adaptive experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800/50 p-6 rounded-xl neuro-border hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                    <div class="text-purple-400 mb-4">
+                        <i data-feather="unlock" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Unlock Inner Potential</h3>
+                    <p class="text-gray-300">Games that help players discover and develop their strengths</p>
+                </div>
+                
+                <div class="bg-gray-800/50 p-6 rounded-xl neuro-border hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                    <div class="text-emerald-400 mb-4">
+                        <i data-feather="user" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Personalized Experience</h3>
+                    <p class="text-gray-300">Tailored gameplay that adapts to individual preferences</p>
+                </div>
+                
+                <div class="bg-gray-800/50 p-6 rounded-xl neuro-border hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                    <div class="text-blue-400 mb-4">
+                        <i data-feather="shield" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ethical Design</h3>
+                    <p class="text-gray-300">Responsible game mechanics that respect players</p>
+                </div>
+                
+                <div class="bg-gray-800/50 p-6 rounded-xl neuro-border hover:shadow-lg hover:shadow-purple-500/20 transition-all">
+                    <div class="text-pink-400 mb-4">
+                        <i data-feather="cpu" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Adaptive Gameplay</h3>
+                    <p class="text-gray-300">Dynamic systems that respond to player behavior</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 bg-gray-800/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 font-['Orbitron']">
+                    Our <span class="text-emerald-400">Vision</span>
+                </h2>
+                <p class="text-xl max-w-4xl mx-auto">
+                    Imagine a world where every game understands players at the level of their motivations, fears, and personality.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-300">Deep Player Understanding</h3>
+                        <p class="text-gray-300">Where gameplay dynamically adapts rather than being imposed. Where studios increase retention and LTV not through FOMO, but through meaningful engagement.</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-emerald-300">Dynamic Adaptation</h3>
+                        <p class="text-gray-300">Our technology analyzes 200+ behavioral signals to create comprehensive psychological profiles that drive real-time adaptation.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-blue-300">Meaningful Engagement</h3>
+                        <p class="text-gray-300">Where technology serves people — not exploits them. Ethical design that creates lasting value for both players and developers.</p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold mb-4 text-pink-300">Human-Centered Technology</h3>
+                        <p class="text-gray-300">Advanced AI tools that predict behavior, personalize content, and generate experiences tailored to each player's psychotype.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="product" class="py-20 bg-gray-900/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 font-['Orbitron']">
+                    <span class="text-purple-400">Product</span> Offering
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Enable game studios to dynamically adapt gameplay experiences to players' psychological profiles
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 p-8 rounded-xl neuro-border">
+                    <h3 class="text-xl font-bold mb-4 text-center text-purple-300">What's Included</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>SDK for Unity/Unreal/WebGL</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Central neuro engine</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Analytics dashboard</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>API for adaptive mechanics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Ethics module</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 p-8 rounded-xl neuro-border">
+                    <h3 class="text-xl font-bold mb-4 text-center text-emerald-300">Monetization Models</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="dollar-sign" class="text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span><strong>PPU:</strong> $0.02 per active user/day</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="percent" class="text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span><strong>RevShare:</strong> 2.5-5% of revenue</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="gift" class="text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span><strong>Freemium:</strong> basic profiling free</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gray-800/50 p-8 rounded-xl neuro-border">
+                    <h3 class="text-xl font-bold mb-4 text-center text-blue-300">Target Audience</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="target" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Mid to large studios (mid-core/hardcore)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="users" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>30+ audience demographics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="shield" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Value ethics, reputation, loyalty</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="cpu" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Technologically mature, SDK-ready</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-20 bg-gray-800/50 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 font-['Orbitron']">
+                    <span class="text-gradient bg-gradient-to-r from-purple-400 to-emerald-400 bg-clip-text text-transparent">Technology</span>
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    Secure, ethical, and easy-to-integrate neuro engine for next-generation game experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="mr-4 p-3 bg-purple-600/20 rounded-lg">
+                                <i data-feather="server" class="text-purple-400 w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">Core System</h3>
+                        </div>
+                        <ul class="ml-16 space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Centralized neuro engine</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Firebase + Cloudflare + AWS</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>200+ behavioral signals</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-emerald-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>AI for real-time adaptation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-3">
+                            <div class="mr-4 p-3 bg-emerald-600/20 rounded-lg">
+                                <i data-feather="cpu" class="text-emerald-400 w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold">AI Tools</h3>
+                        </div>
+                        <ul class="ml-16 space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Neural networks for behavior prediction</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>ML for content personalization</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Real-time difficulty systems</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-feather="chevron-right" class="text-purple-400 mr-2 mt-1 flex-shrink-0"></i>
+                                <span>Content generation by psychotype</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-gray-900/90 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 font-['Orbitron']">
+                    The <span class="text-pink-400">Need</span>
+                </h2>
+                <blockquote class="text-xl italic bg-gray-800/50 p-8 rounded-xl neuro-border">
+                    <p class="mb-4">"I feel guilty that our game retains players through pressure rather than value. I want to create a quality product that people love — not one they can't leave."</p>
+                    <footer class="text-right text-purple-300">— Game Studio Executive</footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 font-['Orbitron']">
+                    Ready to Transform <span class="text-white">Player Engagement</span>?
+                </h2>
+                <p class="text-xl mb-12 max-w-3xl mx-auto">
+                    Contact us to learn how the Neuro Engine can elevate your game
+                </p>
+                <div class="max-w-md mx-auto bg-gray-900/80 rounded-xl p-8 shadow-2xl neuro-border">
+                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-center space-x-4">
+                            <i data-feather="mail" class="text-purple-400"></i>
+                            <span>partners@mnmplex.com</span>
+                        </div>
+                        <div class="pt-6">
+                            <a href="mailto:partners@mnmplex.com" class="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all inline-block">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/80 backdrop-blur-md py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <span class="font-['Orbitron'] text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-emerald-400">M&M Plex</span>
+                    <p class="text-gray-400 mt-2">Making Games Smarter, Players Happier</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-all">
+                        <i data-feather="github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+                <p>© 2023 M&M Plex Neuro Engine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x7c3aed,
+            backgroundColor: 0x111827,
+            points: 12.00,
+            maxDistance: 22.00,
+            spacing: 18.00
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>
